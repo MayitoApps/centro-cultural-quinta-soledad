@@ -27,6 +27,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/home',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/inicio',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/cart',
         destination: '/',
         permanent: true,
