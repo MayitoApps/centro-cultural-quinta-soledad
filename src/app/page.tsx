@@ -17,6 +17,7 @@ import {
 import GrupoOrganicoSection from "@/components/GrupoOrganicoSection";
 import OrigenSpaSection from "@/components/OrigenSpaSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import DiaDeMuertosModal from "@/components/DiaDeMuertosModal";
 import { WA_MESSAGES, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 
 const SALONES_GALLERY = [
@@ -627,6 +628,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Pop-up Festivo Día de Muertos 2026 */}
+      <DiaDeMuertosModal />
     </div>
   );
 }
