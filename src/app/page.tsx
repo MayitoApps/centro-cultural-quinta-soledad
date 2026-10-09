@@ -61,12 +61,6 @@ export default function HomePage() {
 
         {/* Hero Content */}
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16 flex flex-col items-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full border border-gold-500/30 bg-charcoal-900/80 backdrop-blur-md mb-6 text-gold-300 text-[11px] font-cinzel tracking-widest uppercase">
-            <Sparkles className="w-3 h-3 text-gold-400" />
-            Casona Porfiriana de 1870 · Tlalpan Centro
-          </div>
-
           {/* Main Title - Restrained Quiet Luxury Scale */}
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-cinzel tracking-widest text-cantera-50 leading-snug uppercase max-w-2xl drop-shadow-sm font-medium">
             Así se siente la historia, <br className="hidden sm:inline" />
