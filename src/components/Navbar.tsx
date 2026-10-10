@@ -53,11 +53,11 @@ export default function Navbar() {
             <Image
               src="/quinta-soledad-blanco.png"
               alt="Centro Cultural Quinta Soledad"
-              width={140}
-              height={32}
+              width={105}
+              height={24}
               priority
               style={{ width: "auto", height: "auto" }}
-              className="h-7 sm:h-8 w-auto object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
+              className="h-[21px] sm:h-[24px] w-auto object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
             />
           </Link>
         </div>
