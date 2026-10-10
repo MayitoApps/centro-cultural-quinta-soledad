@@ -11,7 +11,7 @@ export default function ContactoPage() {
     nombre: "",
     email: "",
     telefono: "",
-    servicio: "hospedaje",
+    servicio: "Utopía Hotel Boutique",
     mensaje: "",
   });
 
@@ -25,30 +25,23 @@ export default function ContactoPage() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/artes.grupoorganico@gmail.com", {
+      const response = await fetch("/api/contacto", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Accept: "application/json",
         },
-        body: JSON.stringify({
-          Nombre: formData.nombre,
-          Telefono: formData.telefono,
-          Email: formData.email,
-          Servicio: formData.servicio,
-          Mensaje: formData.mensaje,
-          _subject: `Nueva Solicitud Quinta Soledad: ${formData.servicio} - ${formData.nombre}`,
-          _template: "table",
-          _captcha: "false",
-        }),
+        body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      const data = await response.json().catch(() => null);
+
+      if (response.ok && data?.success) {
         setSubmitted(true);
       } else {
-        throw new Error("No se pudo completar el envío automático.");
+        throw new Error(data?.error || data?.details || "No se pudo completar el envío del correo.");
       }
-    } catch (err) {
+    } catch (err: any) {
+      console.error("Error al enviar solicitud:", err);
       // Respaldo inmediato vía mailto para garantizar que el correo siempre llegue
       const mailtoUrl = `mailto:artes.grupoorganico@gmail.com?subject=${encodeURIComponent(
         `Solicitud Quinta Soledad: ${formData.servicio} - ${formData.nombre}`
@@ -241,12 +234,15 @@ export default function ContactoPage() {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
+                    <label htmlFor="nombre" className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
                       Nombre Completo *
                     </label>
                     <input
+                      id="nombre"
+                      name="nombre"
                       type="text"
                       required
+                      autoComplete="name"
                       value={formData.nombre}
                       onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
                       className="w-full px-3.5 py-2 rounded-xl border border-cantera-300 bg-cantera-50 text-charcoal-900 text-xs focus:outline-none focus:border-gold-500"
@@ -254,12 +250,15 @@ export default function ContactoPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
+                    <label htmlFor="telefono" className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
                       Teléfono Celular *
                     </label>
                     <input
+                      id="telefono"
+                      name="telefono"
                       type="tel"
                       required
+                      autoComplete="tel"
                       value={formData.telefono}
                       onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
                       className="w-full px-3.5 py-2 rounded-xl border border-cantera-300 bg-cantera-50 text-charcoal-900 text-xs focus:outline-none focus:border-gold-500"
@@ -270,12 +269,15 @@ export default function ContactoPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
+                    <label htmlFor="email" className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
                       Correo Electrónico *
                     </label>
                     <input
+                      id="email"
+                      name="email"
                       type="email"
                       required
+                      autoComplete="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full px-3.5 py-2 rounded-xl border border-cantera-300 bg-cantera-50 text-charcoal-900 text-xs focus:outline-none focus:border-gold-500"
@@ -283,10 +285,12 @@ export default function ContactoPage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
+                    <label htmlFor="servicio" className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
                       Servicio de Interés *
                     </label>
                     <select
+                      id="servicio"
+                      name="servicio"
                       value={formData.servicio}
                       onChange={(e) => setFormData({ ...formData, servicio: e.target.value })}
                       className="w-full px-3.5 py-2 rounded-xl border border-cantera-300 bg-cantera-50 text-charcoal-900 text-xs focus:outline-none focus:border-gold-500"
@@ -307,10 +311,12 @@ export default function ContactoPage() {
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
+                  <label htmlFor="mensaje" className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
                     Mensaje o Detalles del Evento / Estancia
                   </label>
                   <textarea
+                    id="mensaje"
+                    name="mensaje"
                     rows={4}
                     value={formData.mensaje}
                     onChange={(e) => setFormData({ ...formData, mensaje: e.target.value })}

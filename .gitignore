@@ -34,3 +34,6 @@ yarn-error.log*
 
 # raw images folder (web app serves all images from /public/images)
 Imagenes/
+
+.vercel
+.env*
