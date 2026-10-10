@@ -109,7 +109,7 @@ export default function NuestraHistoriaPage() {
   return (
     <div className="bg-cantera-50 text-charcoal-900 min-h-screen">
       {/* Header Banner */}
-      <section className="relative py-24 sm:py-28 bg-charcoal-950 text-cantera-50 overflow-hidden border-b border-gold-500/20">
+      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 bg-charcoal-950 text-cantera-50 overflow-hidden border-b border-gold-500/20">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/nuestros-espacios/pasillo-de-los-forjadores/ccqs_forjadores01.jpg"

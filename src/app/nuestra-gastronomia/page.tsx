@@ -24,7 +24,7 @@ export default function GastronomiaPage() {
   return (
     <div className="bg-cantera-50 text-charcoal-900 min-h-screen">
       {/* Header Banner - Editorial & Museum Style */}
-      <section className="relative py-20 sm:py-24 bg-charcoal-950 text-cantera-50 overflow-hidden border-b border-gold-500/20">
+      <section className="relative pt-28 pb-16 sm:pt-36 sm:pb-24 bg-charcoal-950 text-cantera-50 overflow-hidden border-b border-gold-500/20">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/nuestros-espacios/restaurante-capitular/ccqs_bebidas_mixologia11.png"
