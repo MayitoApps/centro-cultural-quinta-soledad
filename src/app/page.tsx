@@ -60,16 +60,16 @@ export default function HomePage() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16 flex flex-col items-center">
-          {/* Main Title - Restrained Quiet Luxury Scale */}
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-cinzel tracking-widest text-cantera-50 leading-snug uppercase max-w-2xl drop-shadow-sm font-medium">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16 sm:py-20 flex flex-col items-center">
+          {/* Main Title - Imposing Cultural Heritage Hero */}
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-cinzel tracking-wider md:tracking-widest text-cantera-50 leading-tight uppercase max-w-4xl drop-shadow-md font-medium">
             Así se siente la historia, <br className="hidden sm:inline" />
-            <span className="text-gold-400 font-serif italic normal-case tracking-normal block mt-2 text-xl sm:text-2xl md:text-3xl font-normal">
+            <span className="text-gold-400 font-serif italic normal-case tracking-normal block mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal drop-shadow-sm">
               Así se siente Centro Cultural Quinta Soledad.
             </span>
           </h1>
 
-          <p className="mt-5 text-xs sm:text-sm md:text-base text-cantera-200 font-sans font-light max-w-xl leading-relaxed">
+          <p className="mt-6 text-sm sm:text-base md:text-lg text-cantera-200 font-sans font-light max-w-2xl leading-relaxed">
             Donde la historia, la arquitectura neorrenacentista y la gastronomía se unen para ofrecer una experiencia de buen vivir en el corazón de Tlalpan.
           </p>
 
