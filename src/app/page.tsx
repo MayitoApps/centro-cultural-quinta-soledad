@@ -60,16 +60,16 @@ export default function HomePage() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-16 sm:py-20 flex flex-col items-center">
+        <div className="relative z-10 w-full max-w-6xl 2xl:max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 text-center py-16 sm:py-20 flex flex-col items-center">
           {/* Main Title - Imposing Cultural Heritage Hero */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-cinzel tracking-wider md:tracking-widest text-cantera-50 leading-tight uppercase max-w-4xl drop-shadow-md font-medium">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-cinzel tracking-wider md:tracking-widest text-cantera-50 leading-tight uppercase max-w-5xl 2xl:max-w-6xl drop-shadow-md font-medium">
             Así se siente la historia, <br className="hidden sm:inline" />
             <span className="text-gold-400 font-serif italic normal-case tracking-normal block mt-3 sm:mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal drop-shadow-sm">
               Así se siente Centro Cultural Quinta Soledad.
             </span>
           </h1>
 
-          <p className="mt-6 text-sm sm:text-base md:text-lg text-cantera-200 font-sans font-light max-w-2xl leading-relaxed">
+          <p className="mt-6 text-sm sm:text-base md:text-lg lg:text-xl text-cantera-200 font-sans font-light max-w-3xl leading-relaxed">
             Donde la historia, la arquitectura neorrenacentista y la gastronomía se unen para ofrecer una experiencia de buen vivir en el corazón de Tlalpan.
           </p>
 
@@ -95,8 +95,8 @@ export default function HomePage() {
       <GrupoOrganicoSection />
 
       {/* 3. CULTURAL MANIFESTO & HERITAGE HIGHLIGHT */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
+      <section className="py-20 px-4 sm:px-8 lg:px-12 xl:px-16 w-full max-w-[1536px] mx-auto">
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
           <p className="text-[11px] uppercase tracking-widest text-gold-700 font-cinzel font-semibold">
             Un Legado Centenario
           </p>
@@ -215,8 +215,8 @@ export default function HomePage() {
       </section>
 
       {/* 4. HOTELES BOUTIQUE SHOWCASE */}
-      <section className="py-16 bg-charcoal-950 text-cantera-50 border-t border-gold-500/20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 sm:py-20 bg-charcoal-950 text-cantera-50 border-t border-gold-500/20">
+        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
             <div className="space-y-2">
               <span className="text-[11px] font-cinzel uppercase tracking-widest text-gold-400 font-semibold">
@@ -319,7 +319,7 @@ export default function HomePage() {
       </section>
 
       {/* 5. GASTRONOMÍA & MIXOLOGÍA SHOWCASE (INCLUYE LA MAL QUERIDA) */}
-      <section className="py-20 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         <div className="text-center max-w-2xl mx-auto space-y-2.5 mb-12">
           <span className="text-[11px] font-cinzel uppercase tracking-widest text-gold-700 font-semibold">
             Sabores & Coctelería de Autor
@@ -509,7 +509,7 @@ export default function HomePage() {
 
       {/* 6. MÁS DE 12 SALONES HISTÓRICOS & JARDINES */}
       <section className="py-20 bg-cantera-200/40 border-t border-b border-gold-500/20">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
           {/* Header & Descripción de Salones */}
           <div className="text-center max-w-3xl mx-auto space-y-3.5 mb-12">
             <span className="text-[11px] font-cinzel uppercase tracking-widest text-gold-700 font-semibold">
@@ -580,7 +580,7 @@ export default function HomePage() {
 
       {/* 8. UBICACIÓN & HORARIOS */}
       <section className="py-16 bg-cantera-50 border-t border-cantera-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-cantera-100/80 p-6 rounded-xl border border-gold-500/20 space-y-2">
               <div className="w-8 h-8 rounded-full bg-gold-500/10 flex items-center justify-center text-gold-600">

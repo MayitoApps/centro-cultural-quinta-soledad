@@ -8,7 +8,7 @@ import { createWhatsAppLink, WA_MESSAGES, WHATSAPP_DISPLAY } from "@/lib/whatsap
 export default function Footer() {
   return (
     <footer className="bg-charcoal-950 text-cantera-100 border-t border-gold-500/20 pt-16 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-14 border-b border-charcoal-800">
           {/* Col 1: Identidad & Historia */}
           <div className="space-y-5">

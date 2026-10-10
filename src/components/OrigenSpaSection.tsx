@@ -3,10 +3,10 @@ import { Sparkles, ExternalLink } from "lucide-react";
 
 export default function OrigenSpaSection() {
   return (
-    <section className="py-16 bg-cantera-100 border-y border-gold-500/20 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-cantera-50 border border-gold-500/30 rounded-2xl p-8 sm:p-12 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="space-y-3 max-w-2xl text-center md:text-left">
+    <section className="py-16 sm:py-20 bg-cantera-100 border-y border-gold-500/20 relative overflow-hidden">
+      <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+        <div className="bg-cantera-50 border border-gold-500/30 rounded-2xl p-8 sm:p-12 lg:p-14 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="space-y-3.5 max-w-3xl text-center md:text-left">
             <div className="inline-flex items-center gap-2 text-gold-600 text-xs font-cinzel tracking-widest uppercase">
               <Sparkles className="w-4 h-4 text-gold-500" />
               Bienestar & Rituales de Sanación

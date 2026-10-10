@@ -7,21 +7,21 @@ export default function GrupoOrganicoSection() {
       {/* Decorative ambient background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gold-500/10 via-transparent to-transparent pointer-events-none" />
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 space-y-2.5">
+        <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-[10px] font-cinzel tracking-widest uppercase">
             <Compass className="w-3 h-3" />
             Hospitalidad con Alma
           </div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-cinzel tracking-wider text-cantera-50 uppercase leading-snug">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-cinzel tracking-wider text-cantera-50 uppercase leading-snug">
             DESCUBRE EL UNIVERSO DE GRUPO ORGÁNICO HOTELES BOUTIQUE
           </h2>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto" />
+          <div className="w-20 h-0.5 bg-gradient-to-r from-transparent via-gold-500 to-transparent mx-auto" />
         </div>
 
         {/* Cinematic Video Player */}
-        <div className="relative aspect-video w-full rounded-xl overflow-hidden shadow-2xl border border-gold-500/25 mb-10 bg-charcoal-900">
+        <div className="relative aspect-video w-full max-w-5xl mx-auto rounded-2xl overflow-hidden shadow-2xl border border-gold-500/30 mb-12 bg-charcoal-900">
           <iframe
             src="https://www.youtube-nocookie.com/embed/r2tnnrp-G6Y?rel=0&modestbranding=1&playsinline=1&controls=1&showinfo=0&iv_load_policy=3"
             title="Universo de Grupo Orgánico Hoteles Boutique"

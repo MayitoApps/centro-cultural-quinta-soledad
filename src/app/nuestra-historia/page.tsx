@@ -121,7 +121,7 @@ export default function NuestraHistoriaPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/75 to-transparent" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/15 text-gold-400 text-[10px] font-cinzel tracking-widest uppercase border border-gold-500/30">
             <Clock className="w-3.5 h-3.5 text-gold-400" />
             Crónica Centenaria · Más de 150 Años de Memoria
@@ -130,14 +130,14 @@ export default function NuestraHistoriaPage() {
             Nuestra Historia
           </h1>
           <div className="gold-divider max-w-xs mx-auto my-3" />
-          <p className="text-cantera-200 text-xs sm:text-sm md:text-base max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-cantera-200 text-xs sm:text-sm md:text-base max-w-3xl mx-auto font-light leading-relaxed">
             En el corazón del centro histórico de Tlalpan se alza una casona emblemática donde el esplendor porfiriano, la vocación formativa marista y la hospitalidad contemporánea convergen en un solo espacio con alma.
           </p>
         </div>
       </section>
 
       {/* HISTORICAL STATS / BADGES BAR */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
+      <section className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 -mt-8 relative z-20">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           <div className="bg-charcoal-900/95 backdrop-blur-md border border-gold-500/40 p-4 sm:p-5 rounded-2xl shadow-xl text-center space-y-1">
             <span className="text-2xl sm:text-3xl font-serif text-gold-400 font-bold block">1870</span>
@@ -174,8 +174,8 @@ export default function NuestraHistoriaPage() {
       </section>
 
       {/* TIMELINE PRINCIPAL LLAMATIVO */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
-        <div className="text-center max-w-2xl mx-auto space-y-3 mb-16 sm:mb-20">
+      <section className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-16 sm:py-24">
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-16 sm:mb-20">
           <span className="text-[11px] font-cinzel uppercase tracking-widest text-gold-700 font-semibold">
             Cronología Viva de Nuestra Casona
           </span>

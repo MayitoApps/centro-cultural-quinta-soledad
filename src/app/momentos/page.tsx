@@ -28,22 +28,22 @@ export default function MomentosPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/75 to-transparent" />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-8 lg:px-12 text-center space-y-4">
           <span className="text-[11px] font-cinzel tracking-widest text-gold-400 uppercase">
             Sensaciones que Perduran en la Memoria
           </span>
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif text-cantera-50 tracking-tight leading-tight">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-cantera-50 tracking-tight leading-tight">
             Nuestros Momentos
           </h1>
           <div className="gold-divider max-w-xs mx-auto my-3" />
-          <p className="text-cantera-200 text-xs sm:text-sm max-w-2xl mx-auto font-light leading-relaxed">
+          <p className="text-cantera-200 text-xs sm:text-sm md:text-base max-w-3xl mx-auto font-light leading-relaxed">
             Aquí, las celebraciones se viven con alma, los encuentros se convierten en memorias y cada instante se transforma en una experiencia entrañable.
           </p>
         </div>
       </section>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-24">
+      <div className="w-full max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-16 sm:py-20 space-y-24">
         {/* MOMENTOS ÍNTIMOS */}
         <section id="intimos" className="scroll-mt-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
