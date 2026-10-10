@@ -50,15 +50,16 @@ export default function Navbar() {
         {/* Left Column: Logo refinado pegado a la izquierda */}
         <div className="flex-1 flex items-center justify-start">
           <Link href="/" className="group flex items-center shrink-0 relative z-10">
-            <Image
-              src="/quinta-soledad-blanco.png"
-              alt="Centro Cultural Quinta Soledad"
-              width={105}
-              height={24}
-              priority
-              style={{ width: "auto", height: "auto" }}
-              className="h-[21px] sm:h-[24px] w-auto object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
-            />
+            <div className="relative w-[80px] h-[19px] sm:w-[92px] sm:h-[21px] shrink-0 transition-transform duration-200 group-hover:scale-[1.02]">
+              <Image
+                src="/quinta-soledad-blanco.png"
+                alt="Centro Cultural Quinta Soledad"
+                fill
+                sizes="95px"
+                className="object-contain object-left"
+                priority
+              />
+            </div>
           </Link>
         </div>
 
