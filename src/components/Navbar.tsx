@@ -46,18 +46,18 @@ export default function Navbar() {
           : "bg-gradient-to-b from-black/85 via-black/45 to-transparent py-5 sm:py-6 border-b border-transparent"
       }`}
     >
-      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 relative flex items-center justify-between">
-        {/* Left Column: Logo con la misma altura elegante de Orgánico Hotel Boutique */}
+      <div className="w-full px-4 sm:px-6 lg:px-8 relative flex items-center justify-between">
+        {/* Left Column: Logo refinado pegado a la izquierda */}
         <div className="flex-1 flex items-center justify-start">
-          <Link href="/" className="group flex items-center gap-3 relative z-10 -ml-1 sm:ml-0">
+          <Link href="/" className="group flex items-center shrink-0 relative z-10">
             <Image
               src="/quinta-soledad-blanco.png"
               alt="Centro Cultural Quinta Soledad"
-              width={205}
-              height={48}
+              width={140}
+              height={32}
               priority
               style={{ width: "auto", height: "auto" }}
-              className="max-h-10 sm:max-h-12 w-auto object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
+              className="h-7 sm:h-8 w-auto object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
             />
           </Link>
         </div>
