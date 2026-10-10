@@ -27,7 +27,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      setScrolled(window.scrollY > 30);
     };
     handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -42,37 +42,35 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "glass-nav-dark py-3 shadow-lg shadow-black/40 border-b border-gold-500/20"
-          : "bg-gradient-to-b from-black/85 via-black/45 to-transparent py-4 sm:py-5 border-b border-transparent"
+          ? "glass-nav-dark py-3.5 shadow-lg shadow-black/40 border-b border-gold-500/20"
+          : "bg-gradient-to-b from-black/85 via-black/45 to-transparent py-5 sm:py-6 border-b border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Compact Refined Logo (Blanco para contraste sobre fondo transparente/oscuro) */}
-        <Link href="/" className="flex items-center group shrink-0 lg:w-[125px]">
-          <div
-            className="relative transition-transform duration-200 group-hover:scale-[1.03] shrink-0"
-            style={{ width: "115px", height: "28px" }}
-          >
+      <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 relative flex items-center justify-between">
+        {/* Left Column: Logo con la misma altura elegante de Orgánico Hotel Boutique */}
+        <div className="flex-1 flex items-center justify-start">
+          <Link href="/" className="group flex items-center gap-3 relative z-10 -ml-1 sm:ml-0">
             <Image
               src="/quinta-soledad-blanco.png"
               alt="Centro Cultural Quinta Soledad"
-              fill
-              sizes="120px"
-              className="object-contain object-left"
+              width={205}
+              height={48}
               priority
+              style={{ width: "auto", height: "auto" }}
+              className="max-h-10 sm:max-h-12 w-auto object-contain object-left transition-transform duration-300 group-hover:scale-[1.02]"
             />
-          </div>
-        </Link>
+          </Link>
+        </div>
 
-        {/* Desktop Centered Navigation */}
-        <nav className="hidden lg:flex items-center justify-center space-x-2 xl:space-x-3.5 2xl:space-x-4 flex-1 mx-2">
+        {/* Center Column: Navegación de escritorio centrada matemáticamente */}
+        <nav className="hidden lg:flex items-center justify-center gap-2 xl:gap-3.5 2xl:gap-5 shrink-0">
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-[9.5px] xl:text-[10.5px] font-cinzel tracking-wider uppercase transition-colors whitespace-nowrap py-1 relative ${
+                className={`text-[9.5px] xl:text-[10.5px] 2xl:text-[11.5px] font-cinzel tracking-wider uppercase transition-colors whitespace-nowrap py-1.5 relative ${
                   isActive
                     ? "text-gold-400 font-bold"
                     : "text-cantera-100/80 hover:text-gold-300 font-medium"
@@ -87,27 +85,27 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* Right CTA Button (Estilo Orgánico Hotel Boutique) */}
-        <div className="hidden lg:flex items-center justify-end shrink-0 lg:w-[125px]">
+        {/* Right Column: CTA de Reservar simétrico a la derecha y Hamburguesa móvil */}
+        <div className="flex-1 flex items-center justify-end gap-3 sm:gap-4">
           <a
             href={createWhatsAppLink(WA_MESSAGES.general)}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full border border-gold-500/40 bg-gold-500/10 hover:bg-gold-500 text-cantera-50 hover:text-charcoal-950 text-[10px] uppercase font-cinzel tracking-wider font-semibold transition-all duration-300 shadow-sm hover:shadow-[0_4px_16px_rgba(197,168,128,0.3)]"
+            className="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-gold-500/40 bg-gold-500/10 hover:bg-gold-500 text-cantera-50 hover:text-charcoal-950 text-[10.5px] uppercase font-cinzel tracking-wider font-semibold transition-all duration-300 shadow-sm hover:shadow-[0_4px_16px_rgba(197,168,128,0.3)]"
           >
             <span>Reservar</span>
             <ArrowUpRight className="w-3.5 h-3.5 text-gold-400" />
           </a>
-        </div>
 
-        {/* Mobile Menu Toggle */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-1.5 rounded-md text-cantera-50 hover:text-gold-400 hover:bg-white/10 transition-colors focus:outline-none"
-          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
-        >
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+          {/* Mobile Menu Toggle */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 rounded-lg text-cantera-50 hover:text-gold-400 hover:bg-white/10 transition-colors focus:outline-none"
+            aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Drawer Menu */}

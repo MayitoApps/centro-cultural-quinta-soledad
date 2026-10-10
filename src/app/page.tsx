@@ -45,7 +45,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-cantera-50">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center bg-charcoal-950 text-cantera-50 overflow-hidden pt-24 pb-16 sm:pt-28 sm:pb-20">
+      <section className="relative min-h-screen flex items-center justify-center bg-charcoal-950 text-cantera-50 overflow-hidden pt-28 pb-16 sm:pt-32 sm:pb-20">
         {/* Background Image with Cinematic Dark Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
