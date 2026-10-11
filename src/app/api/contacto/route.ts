@@ -45,7 +45,7 @@ export async function POST(request: Request) {
     );
     const waUrl = waPhone ? `https://wa.me/${waPhone}?text=${waText}` : null;
 
-    const replySubject = encodeURIComponent(`Re: Solicitud en Quinta Soledad - ${safeServicio}`);
+    const replySubject = encodeURIComponent(`Re: [Quinta Soledad] ${safeServicio}`);
     const mailtoReplyUrl = `mailto:${encodeURIComponent(String(email).trim())}?subject=${replySubject}`;
 
     // Credenciales SMTP
@@ -72,6 +72,8 @@ export async function POST(request: Request) {
       timeZone: "America/Mexico_City",
     }).format(new Date());
 
+    const emailSubject = `Centro Cultural Quinta Soledad - ${safeNombre}`;
+
     // Plantilla HTML de Alta Gama (Dorado, Cantera y Carbón) - 100% Mobile-First Responsive
     const htmlTemplate = `
 <!DOCTYPE html>
@@ -83,7 +85,7 @@ export async function POST(request: Request) {
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
   <meta name="color-scheme" content="dark only">
   <meta name="supported-color-schemes" content="dark only">
-  <title>Nueva Solicitud Quinta Soledad</title>
+  <title>Centro Cultural Quinta Soledad - ${safeNombre}</title>
   <style>
     :root { color-scheme: dark only; supported-color-schemes: dark only; }
     body {
@@ -101,9 +103,8 @@ export async function POST(request: Request) {
     @media only screen and (max-width: 600px) {
       .email-wrapper { padding: 10px 8px !important; }
       .email-container { max-width: 100% !important; border-radius: 14px !important; }
-      .email-header { padding: 26px 16px 20px !important; }
-      .brand-title { font-size: 20px !important; letter-spacing: 2px !important; }
-      .brand-subtitle { font-size: 10.5px !important; letter-spacing: 1.5px !important; }
+      .email-header { padding: 22px 16px 18px !important; }
+      .brand-title { font-size: 19px !important; letter-spacing: 1.5px !important; }
       .card-container { padding: 14px 12px 20px !important; }
       .data-cell { padding: 12px 14px !important; }
       .actions-container { padding: 8px 12px 24px !important; }
@@ -126,54 +127,33 @@ export async function POST(request: Request) {
         <!-- Contenedor Principal -->
         <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" class="email-container" style="max-width: 620px; background-color: #141312; border: 1px solid #A9895B; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.6);">
           
-          <!-- Encabezado Editorial -->
+          <!-- Encabezado con Nombre del Hotel / Espacio -->
           <tr>
-            <td class="email-header" style="background: linear-gradient(180deg, #1A1918 0%, #141312 100%); padding: 36px 30px 24px 30px; text-align: center; border-bottom: 1px solid #34312D;">
-              <p class="brand-subtitle" style="margin: 0 0 8px 0; font-size: 11px; letter-spacing: 0.25em; color: #C5A880; text-transform: uppercase; font-weight: 600;">
-                Grupo Orgánico · Hoteles Boutique &amp; Espacios Históricos
-              </p>
-              <h1 class="brand-title" style="margin: 0; font-size: 24px; letter-spacing: 0.08em; color: #FDFBF7; font-family: 'Georgia', 'Playfair Display', serif; font-weight: normal; text-transform: uppercase;">
+            <td class="email-header" style="background: linear-gradient(180deg, #1A1918 0%, #141312 100%); padding: 28px 24px 22px; text-align: center; border-bottom: 1px solid #34312D;">
+              <h1 class="brand-title" style="margin: 0; font-size: 22px; letter-spacing: 1.5px; color: #FDFBF7; font-family: 'Georgia', 'Playfair Display', serif; font-weight: normal; text-transform: uppercase;">
                 Centro Cultural Quinta Soledad
               </h1>
-              <p style="margin: 8px 0 0 0; font-size: 12px; letter-spacing: 0.15em; color: #BEA781; text-transform: uppercase;">
-                Hacienda del Siglo XVIII · Tlalpan, CDMX
-              </p>
-              <div style="display: inline-block; background-color: rgba(197, 168, 128, 0.12); border: 1px solid #C5A880; border-radius: 999px; padding: 6px 16px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #C5A880; font-weight: 600; margin-top: 14px;">
-                ★ Nueva Solicitud de Información &amp; Concierge
-              </div>
             </td>
           </tr>
 
-          <!-- Contenido: Tarjeta de Datos del Prospecto -->
+          <!-- Contenido: Información del Prospecto -->
           <tr>
             <td class="card-container" style="padding: 16px 30px 24px 30px;">
               <table role="presentation" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color: #1A1918; border: 1px solid #242220; border-radius: 12px; overflow: hidden;">
                 
-                <!-- Servicio de Interés Destacado -->
+                <!-- Nombre del Visitante -->
                 <tr>
                   <td class="data-cell" style="padding: 16px 20px; background-color: #242220; border-bottom: 1px solid #34312D; word-break: break-word;">
-                    <p style="margin: 0; font-size: 11px; letter-spacing: 0.15em; color: #C5A880; text-transform: uppercase; font-weight: 600;">
-                      Servicio Seleccionado
-                    </p>
-                    <p style="margin: 4px 0 0 0; font-size: 18px; color: #FDFBF7; font-family: 'Georgia', serif; font-weight: bold; word-break: break-word;">
-                      ${safeServicio}
-                    </p>
-                  </td>
-                </tr>
-
-                <!-- Nombre -->
-                <tr>
-                  <td class="data-cell" style="padding: 14px 20px; border-bottom: 1px solid #242220; word-break: break-word;">
-                    <p style="margin: 0; font-size: 10px; letter-spacing: 0.15em; color: #BEA781; text-transform: uppercase; font-weight: 600;">
+                    <p style="margin: 0; font-size: 10px; letter-spacing: 0.15em; color: #C5A880; text-transform: uppercase; font-weight: 600;">
                       Nombre del Visitante
                     </p>
-                    <p style="margin: 4px 0 0 0; font-size: 15px; color: #FDFBF7; font-weight: 500; word-break: break-word;">
+                    <p style="margin: 4px 0 0 0; font-size: 17px; color: #FDFBF7; font-weight: 600; word-break: break-word;">
                       ${safeNombre}
                     </p>
                   </td>
                 </tr>
 
-                <!-- Correo -->
+                <!-- Correo Electrónico -->
                 <tr>
                   <td class="data-cell" style="padding: 14px 20px; border-bottom: 1px solid #242220; word-break: break-word;">
                     <p style="margin: 0; font-size: 10px; letter-spacing: 0.15em; color: #BEA781; text-transform: uppercase; font-weight: 600;">
@@ -199,9 +179,21 @@ export async function POST(request: Request) {
                       </a>
                       ${
                         waUrl
-                          ? '<span style="margin-left: 10px; font-size: 12px; color: #25D366; font-weight: 600;">(Disponible para WhatsApp)</span>'
+                          ? '<span style="margin-left: 10px; font-size: 12px; color: #25D366; font-weight: 600;">(WhatsApp Disponible)</span>'
                           : ''
                       }
+                    </p>
+                  </td>
+                </tr>
+
+                <!-- Servicio Seleccionado -->
+                <tr>
+                  <td class="data-cell" style="padding: 14px 20px; border-bottom: 1px solid #242220; word-break: break-word;">
+                    <p style="margin: 0; font-size: 10px; letter-spacing: 0.15em; color: #BEA781; text-transform: uppercase; font-weight: 600;">
+                      Servicio Seleccionado
+                    </p>
+                    <p style="margin: 4px 0 0 0; font-size: 15px; color: #FDFBF7; font-weight: 500; word-break: break-word;">
+                      ${safeServicio}
                     </p>
                   </td>
                 </tr>
@@ -281,13 +273,13 @@ export async function POST(request: Request) {
     // Versión en texto plano para clientes antiguos
     const textTemplate = `
 ==============================================
-NUEVA SOLICITUD - CENTRO CULTURAL QUINTA SOLEDAD
+Centro Cultural Quinta Soledad
 ==============================================
 
-Servicio de Interés: ${String(servicio || "General")}
 Nombre: ${String(nombre)}
 Correo: ${String(email)}
 Teléfono: ${String(telefono)}
+Servicio de Interés: ${String(servicio || "General")}
 Fecha: ${fechaEnvio}
 
 Mensaje / Requerimiento:
@@ -303,7 +295,7 @@ Responder directamente al cliente: ${String(email)}
       from: `"Centro Cultural Quinta Soledad" <${smtpUser}>`,
       to: receiverEmail,
       replyTo: String(email).trim(),
-      subject: `Nueva Solicitud Quinta Soledad: ${String(servicio || "Contacto")} - ${String(nombre)}`,
+      subject: emailSubject,
       text: textTemplate,
       html: htmlTemplate,
     });
