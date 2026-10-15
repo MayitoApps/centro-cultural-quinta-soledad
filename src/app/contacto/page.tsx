@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react";
+import { MapPin, Phone, Clock, Send, CheckCircle2 } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { createWhatsAppLink, WA_MESSAGES, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 
@@ -42,14 +42,9 @@ export default function ContactoPage() {
       }
     } catch (err: any) {
       console.error("Error al enviar solicitud:", err);
-      // Respaldo inmediato vía mailto para garantizar que el correo siempre llegue
-      const mailtoUrl = `mailto:artes.grupoorganico@gmail.com?subject=${encodeURIComponent(
-        `Solicitud Quinta Soledad: ${formData.servicio} - ${formData.nombre}`
-      )}&body=${encodeURIComponent(
-        `Nombre: ${formData.nombre}\nTeléfono: ${formData.telefono}\nCorreo: ${formData.email}\nServicio: ${formData.servicio}\n\nMensaje:\n${formData.mensaje}`
-      )}`;
-      window.location.href = mailtoUrl;
-      setSubmitted(true);
+      setErrorMessage(
+        err?.message || "No fue posible enviar tu mensaje en este momento. Por favor contáctanos por teléfono o WhatsApp."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -163,21 +158,6 @@ export default function ContactoPage() {
                   </p>
                 </div>
               </div>
-
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-cantera-100/70 border border-gold-500/20">
-                <Mail className="w-4 h-4 text-gold-600 shrink-0 mt-0.5" />
-                <div>
-                  <h3 className="font-cinzel text-xs uppercase tracking-wider text-charcoal-900 font-semibold">
-                    Correo Electrónico
-                  </h3>
-                  <a
-                    href="mailto:artes.grupoorganico@gmail.com"
-                    className="text-xs mt-1 block text-charcoal-600 hover:text-gold-700"
-                  >
-                    artes.grupoorganico@gmail.com
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
 
@@ -191,8 +171,7 @@ export default function ContactoPage() {
                 Reserva o Solicita una Cotización
               </h3>
               <p className="text-xs text-charcoal-600 font-light">
-                Completa este formulario para enviar tu mensaje directamente a nuestro buzón oficial{" "}
-                <strong className="text-charcoal-800">artes.grupoorganico@gmail.com</strong>.
+                Completa este formulario para enviar tu mensaje directamente a nuestro equipo de atención y concierge.
               </p>
             </div>
 
@@ -203,7 +182,7 @@ export default function ContactoPage() {
                 </div>
                 <h4 className="font-serif text-xl text-charcoal-900">¡Solicitud Enviada con Éxito!</h4>
                 <p className="text-xs text-charcoal-600 max-w-md mx-auto leading-relaxed">
-                  Tu correo ha sido remitido a <strong className="text-charcoal-800">artes.grupoorganico@gmail.com</strong>. Nuestro equipo de concierge te responderá a la brevedad posible.
+                  Tu solicitud ha sido enviada exitosamente. Nuestro equipo de concierge te responderá a la brevedad posible.
                 </p>
                 <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
                   <button
@@ -219,7 +198,7 @@ export default function ContactoPage() {
                     }}
                     className="text-xs font-cinzel text-gold-800 hover:text-gold-900 underline"
                   >
-                    Enviar otro correo
+                    Enviar otra solicitud
                   </button>
                   <span className="text-xs text-charcoal-400 hidden sm:inline">·</span>
                   <WhatsAppButton
@@ -232,6 +211,11 @@ export default function ContactoPage() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
+                {errorMessage && (
+                  <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-700 text-xs">
+                    {errorMessage}
+                  </div>
+                )}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="nombre" className="block text-[11px] font-cinzel tracking-wider text-charcoal-800 uppercase mb-1">
@@ -330,11 +314,11 @@ export default function ContactoPage() {
                   disabled={isSubmitting}
                   className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-cinzel text-xs tracking-wider uppercase font-semibold bg-gold-500 hover:bg-gold-400 text-charcoal-950 border border-gold-600 shadow-sm transition-all disabled:opacity-60"
                 >
-                  <Mail className="w-4 h-4 text-charcoal-950" />
+                  <Send className="w-4 h-4 text-charcoal-950" />
                   <span>
                     {isSubmitting
-                      ? "Enviando Correo a artes.grupoorganico@gmail.com..."
-                      : "Enviar Solicitud por Correo Electrónico"}
+                      ? "Enviando Solicitud..."
+                      : "Enviar Solicitud"}
                   </span>
                 </button>
               </form>

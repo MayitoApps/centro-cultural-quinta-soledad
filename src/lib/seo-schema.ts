@@ -15,7 +15,6 @@ export const SITE_METADATA = {
     longitude: -99.1673,
   },
   telephones: ["+52 55 9691 0966", "+52 55 9696 9073", "+52 55 7455 5091"],
-  email: "artes.grupoorganico@gmail.com",
   openingHours: [
     "Mo-Th 09:00-20:00",
     "Fr-Sa 09:00-22:00",
@@ -41,7 +40,6 @@ export function getOrganizationSchema() {
         "image": `${SITE_METADATA.siteUrl}/quinta-soledad.png`,
         "description": SITE_METADATA.description,
         "telephone": "+52 55 7455 5091",
-        "email": SITE_METADATA.email,
         "address": {
           "@type": "PostalAddress",
           "streetAddress": SITE_METADATA.address.streetAddress,

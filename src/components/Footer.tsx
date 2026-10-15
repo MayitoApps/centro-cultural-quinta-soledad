@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, ExternalLink, ShieldCheck, Heart } from "lucide-react";
+import { MapPin, Phone, Clock, Instagram, Facebook, ExternalLink, ShieldCheck, Heart } from "lucide-react";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { createWhatsAppLink, WA_MESSAGES, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 
@@ -147,15 +147,6 @@ export default function Footer() {
                   <p>(55) 9691-0966 / (55) 9696-9073</p>
                   <p>(55) 5645-5347 / (55) 5573-7822</p>
                 </div>
-              </div>
-              <div className="flex items-start gap-2.5">
-                <Mail className="w-4 h-4 text-gold-400 shrink-0 mt-0.5" />
-                <a
-                  href="mailto:artes.grupoorganico@gmail.com"
-                  className="text-xs text-cantera-300 hover:text-gold-300 transition-colors"
-                >
-                  artes.grupoorganico@gmail.com
-                </a>
               </div>
             </div>
 
