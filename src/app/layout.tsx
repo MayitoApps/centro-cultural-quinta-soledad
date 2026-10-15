@@ -81,6 +81,9 @@ export const metadata: Metadata = {
 
 import GlobalImageLightbox from "@/components/GlobalImageLightbox";
 
+// Modo fuera de servicio temporal (cambiar a false para reactivar el sitio completo)
+const IS_OUT_OF_SERVICE = true;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,20 +92,39 @@ export default function RootLayout({
   const jsonLd = getOrganizationSchema();
 
   return (
-    <html lang="es-MX" className="scroll-smooth">
+    <html lang="es-MX" className="scroll-smooth bg-black">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="bg-cantera-50 text-charcoal-900 antialiased min-h-screen flex flex-col font-sans selection:bg-gold-500 selection:text-charcoal-950">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <WhatsAppFloatingButton />
-        <GlobalImageLightbox />
-        <Analytics />
+      <body className={`antialiased min-h-screen ${IS_OUT_OF_SERVICE ? "bg-black text-white overflow-hidden" : "bg-cantera-50 text-charcoal-900 flex flex-col font-sans selection:bg-gold-500 selection:text-charcoal-950"}`}>
+        {IS_OUT_OF_SERVICE ? (
+          <>
+            <div
+              className="fixed inset-0 z-[999999] bg-black flex flex-col items-center justify-center p-6 text-center select-none"
+              role="alert"
+              aria-live="polite"
+            >
+              <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif text-white tracking-wide font-normal">
+                Sitio web fuera de servicio
+              </h1>
+            </div>
+            <div className="hidden" aria-hidden="true">
+              {children}
+            </div>
+          </>
+        ) : (
+          <>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <WhatsAppFloatingButton />
+            <GlobalImageLightbox />
+            <Analytics />
+          </>
+        )}
       </body>
     </html>
   );
