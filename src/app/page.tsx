@@ -10,10 +10,12 @@ import {
   MapPin, 
   Sparkles, 
   ArrowRight, 
+  ArrowUpRight,
   Dog, 
   Clock,
   Wine
 } from "lucide-react";
+import { HOTEL_INFO } from "@/lib/constants";
 import GrupoOrganicoSection from "@/components/GrupoOrganicoSection";
 import OrigenSpaSection from "@/components/OrigenSpaSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -75,12 +77,16 @@ export default function HomePage() {
 
           {/* Primary Action Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row items-center gap-3.5 w-full sm:w-auto">
-            <WhatsAppButton
-              message={WA_MESSAGES.general}
-              text="Reservar por WhatsApp"
-              variant="gold"
-              className="w-full sm:w-auto px-6 py-3 text-xs"
-            />
+            <a
+              href={HOTEL_INFO.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-gold-500 hover:bg-gold-400 text-charcoal-950 text-xs font-cinzel font-semibold uppercase tracking-wider transition-all duration-300 shadow-lg shadow-gold-500/20 active:scale-[0.98]"
+              aria-label="Reservar en Centro Cultural Quinta Soledad"
+            >
+              <span>Reservar</span>
+              <ArrowUpRight className="w-4 h-4 shrink-0" />
+            </a>
             <Link
               href="/quienes-somos"
               className="btn-luxury w-full sm:w-auto px-6 py-3 text-[11px] tracking-widest border-gold-500/50"
@@ -260,12 +266,15 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-6 pt-0 flex gap-3">
-                <WhatsAppButton
-                  message={WA_MESSAGES.utopia}
-                  text="Reservar Utopía"
-                  variant="gold"
-                  className="flex-1 text-xs"
-                />
+                <a
+                  href={HOTEL_INFO.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-cinzel text-xs tracking-wider uppercase font-semibold transition-all duration-300 shadow-sm"
+                >
+                  <span>Reservar</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
                 <Link
                   href="/hoteles#utopia"
                   className="btn-luxury px-4 py-2.5 text-[10px] tracking-wider border-cantera-300/30"
@@ -300,12 +309,15 @@ export default function HomePage() {
                 </div>
               </div>
               <div className="p-6 pt-0 flex gap-3">
-                <WhatsAppButton
-                  message={WA_MESSAGES.hermitageSencilla}
-                  text="Reservar Hermitage"
-                  variant="gold"
-                  className="flex-1 text-xs"
-                />
+                <a
+                  href={HOTEL_INFO.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-cinzel text-xs tracking-wider uppercase font-semibold transition-all duration-300 shadow-sm"
+                >
+                  <span>Reservar</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
                 <WhatsAppButton
                   message={WA_MESSAGES.hospitales}
                   text="Tarifa Hospitales"

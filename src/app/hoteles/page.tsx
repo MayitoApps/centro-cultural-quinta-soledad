@@ -1,7 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Bed, Tv, Coffee, ShieldCheck, Heart, Sparkles, Check, Info, Maximize2 } from "lucide-react";
+import { Bed, Tv, Coffee, ShieldCheck, Heart, Sparkles, Check, Info, Maximize2, ArrowUpRight } from "lucide-react";
+import { HOTEL_INFO } from "@/lib/constants";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { WA_MESSAGES } from "@/lib/whatsapp";
 import type { Metadata } from "next";
@@ -97,13 +98,17 @@ export default function HotelesPage() {
                 </div>
               </div>
 
-              {/* Botón WhatsApp */}
+              {/* Botón Reservar Easy-Rez */}
               <div className="pt-2">
-                <WhatsAppButton
-                  message={WA_MESSAGES.utopia}
-                  text="Reservar Habitación Utopía"
-                  variant="gold"
-                />
+                <a
+                  href={HOTEL_INFO.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-cinzel text-xs tracking-wider uppercase font-semibold transition-all duration-300 shadow-sm"
+                >
+                  <span>Reservar</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
 
@@ -275,18 +280,17 @@ export default function HotelesPage() {
                 </div>
               </div>
 
-              {/* Botones WhatsApp específicos */}
-              <div className="pt-2 flex flex-wrap gap-3">
-                <WhatsAppButton
-                  message={WA_MESSAGES.hermitageSencilla}
-                  text="Reservar Sencilla"
-                  variant="gold"
-                />
-                <WhatsAppButton
-                  message={WA_MESSAGES.hermitageDoble}
-                  text="Reservar Doble"
-                  variant="gold"
-                />
+              {/* Botón Reservar Easy-Rez */}
+              <div className="pt-2">
+                <a
+                  href={HOTEL_INFO.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-cinzel text-xs tracking-wider uppercase font-semibold transition-all duration-300 shadow-sm"
+                >
+                  <span>Reservar</span>
+                  <ArrowUpRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>

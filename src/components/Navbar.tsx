@@ -5,8 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowUpRight } from "lucide-react";
-import { createWhatsAppLink, WA_MESSAGES } from "@/lib/whatsapp";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import { HOTEL_INFO } from "@/lib/constants";
 
 const NAV_LINKS = [
   { href: "/", label: "Inicio" },
@@ -89,13 +88,13 @@ export default function Navbar() {
         {/* Right Column: CTA de Reservar simétrico a la derecha y Hamburguesa móvil */}
         <div className="flex-1 flex items-center justify-end gap-3 sm:gap-4">
           <a
-            href={createWhatsAppLink(WA_MESSAGES.general)}
+            href={HOTEL_INFO.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-gold-500/40 bg-gold-500/10 hover:bg-gold-500 text-cantera-50 hover:text-charcoal-950 text-[10.5px] uppercase font-cinzel tracking-wider font-semibold transition-all duration-300 shadow-sm hover:shadow-[0_4px_16px_rgba(197,168,128,0.3)]"
           >
             <span>Reservar</span>
-            <ArrowUpRight className="w-3.5 h-3.5 text-gold-400" />
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </a>
 
           {/* Mobile Menu Toggle */}
@@ -132,12 +131,15 @@ export default function Navbar() {
             })}
           </div>
           <div className="pt-2">
-            <WhatsAppButton
-              message={WA_MESSAGES.general}
-              text="Reservar por WhatsApp"
-              variant="gold"
-              className="w-full text-xs py-3"
-            />
+            <a
+              href={HOTEL_INFO.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full border border-gold-500/40 bg-gold-500 hover:bg-gold-400 text-charcoal-950 text-xs uppercase font-cinzel tracking-wider font-semibold transition-all duration-300 shadow-sm active:scale-[0.98]"
+            >
+              <span>Reservar</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
           </div>
           <div className="pt-2 text-center text-[10px] text-cantera-300/70 font-sans tracking-wide">
             Calle Moneda 15, Tlalpan Centro · Casona Histórica de 1870
