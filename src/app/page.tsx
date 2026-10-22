@@ -261,7 +261,7 @@ export default function HomePage() {
                     Utopía Hotel Boutique
                   </h3>
                   <p className="text-[11px] text-cantera-300 leading-relaxed font-light">
-                    Un refugio íntimo donde la calma, el arte y la historia se encuentran. Habitaciones con alma propia, batas, Smart TV 32&quot; y desayuno continental incluido.
+                    Un refugio íntimo donde la calma, el arte y la historia se encuentran. Habitaciones con alma propia, batas exclusivas en Utopía, Smart TV 32&quot; y desayuno continental incluido (plancha y secadora disponibles en recepción).
                   </p>
                 </div>
               </div>
@@ -304,7 +304,7 @@ export default function HomePage() {
                     Hotel Express Hermitage
                   </h3>
                   <p className="text-[11px] text-cantera-300 leading-relaxed font-light">
-                    Habitaciones sencillas y dobles, baño privado completo, room service y desayuno continental. Tarifas preferenciales para pacientes y familiares de hospitales de Tlalpan.
+                    Habitaciones sencillas y dobles, baño privado completo, room service y desayuno continental (plancha y secadora se piden en recepción). Tarifas preferenciales para pacientes y familiares de hospitales de Tlalpan.
                   </p>
                 </div>
               </div>

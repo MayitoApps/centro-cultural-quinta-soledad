@@ -81,11 +81,11 @@ export default function HotelesPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-gold-600 shrink-0" />
-                    <span>Batas y toallas de baño premium</span>
+                    <span>Batas de baño (exclusivo Utopía) y toallas premium</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-gold-600 shrink-0" />
-                    <span>Secadora de cabello & plancha</span>
+                    <span>Plancha y secadora (se piden en recepción)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-gold-600 shrink-0" />
@@ -271,11 +271,19 @@ export default function HotelesPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-gold-600 shrink-0" />
+                    <span>Plancha y secadora (se piden en recepción)</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="w-3.5 h-3.5 text-gold-600 shrink-0" />
                     <span>Room service disponible</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-gold-600 shrink-0" />
                     <span>Estacionamiento sin costo</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="w-3.5 h-3.5 text-gold-600 shrink-0" />
+                    <span>Seguridad privada 24/7</span>
                   </div>
                 </div>
               </div>
