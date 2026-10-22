@@ -50,7 +50,7 @@ export async function POST(request: Request) {
 
     // Credenciales SMTP
     const smtpUser = process.env.SMTP_USER || "artes.grupoorganico@gmail.com";
-    const rawPass = process.env.SMTP_PASS || "aifq xmkb kmas qtjn";
+    const rawPass = process.env.SMTP_PASS || "nefuypoxqlbtfclz";
     // Gmail App Password sin espacios
     const smtpPass = rawPass.replace(/\s+/g, "");
     const receiverEmail = process.env.CONTACT_RECEIVER_EMAIL || "artes.grupoorganico@gmail.com";
