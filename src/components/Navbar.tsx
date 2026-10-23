@@ -8,7 +8,6 @@ import { Menu, X, ArrowUpRight } from "lucide-react";
 import { HOTEL_INFO } from "@/lib/constants";
 
 const NAV_LINKS = [
-  { href: "/", label: "Inicio" },
   { href: "/hoteles", label: "Hoteles" },
   { href: "/nuestra-gastronomia", label: "Gastronomía & Mixología" },
   { href: "/eventos", label: "Eventos y Espacios" },

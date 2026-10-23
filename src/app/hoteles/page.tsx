@@ -65,6 +65,32 @@ export default function HotelesPage() {
                 Perfecta para quienes disfrutan de los pequeños placeres: un café en el jardín, un vino al atardecer o una noche tranquila entre libros y conversación.
               </p>
 
+              {/* Tarifa Utopía */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-sm">
+                <div>
+                  <span className="text-[10px] font-cinzel tracking-widest text-gold-800 uppercase block font-semibold">
+                    Tarifa por noche
+                  </span>
+                  <div className="flex items-baseline gap-2 mt-0.5">
+                    <span className="text-2xl sm:text-3xl font-serif font-bold text-charcoal-950">
+                      $1,392.00
+                    </span>
+                    <span className="text-xs font-sans text-charcoal-600 font-medium">
+                      MXN / noche
+                    </span>
+                  </div>
+                  <span className="text-[11px] text-charcoal-600 font-sans block mt-0.5">
+                    Impuestos incluidos · Desayuno continental incluido
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-charcoal-900 text-gold-300 text-[10px] font-cinzel uppercase tracking-wider font-semibold border border-gold-500/30 shadow-sm">
+                    <Sparkles className="w-3 h-3 text-gold-400" />
+                    Suite Signature
+                  </span>
+                </div>
+              </div>
+
               {/* Amenidades */}
               <div className="bg-cantera-100 p-5 rounded-2xl border border-gold-500/20 space-y-3">
                 <h3 className="text-[11px] font-cinzel tracking-widest text-charcoal-900 uppercase font-semibold">
@@ -98,8 +124,8 @@ export default function HotelesPage() {
                 </div>
               </div>
 
-              {/* Botón Reservar Easy-Rez */}
-              <div className="pt-2">
+              {/* Botón Reservar Easy-Rez & WhatsApp */}
+              <div className="pt-2 flex flex-wrap items-center gap-3">
                 <a
                   href={HOTEL_INFO.bookingUrl}
                   target="_blank"
@@ -109,6 +135,12 @@ export default function HotelesPage() {
                   <span>Reservar</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
+                <WhatsAppButton
+                  message={WA_MESSAGES.utopia}
+                  text="Consultar por WhatsApp"
+                  variant="outline"
+                  className="px-5 py-3 text-xs text-charcoal-900 border-charcoal-300 hover:border-gold-600"
+                />
               </div>
             </div>
 
@@ -247,6 +279,66 @@ export default function HotelesPage() {
                 Ya sea que viajes por placer, trabajo o para acompañar a un ser querido en la zona de hospitales de Tlalpan, aquí encontrarás un espacio tranquilo que te hará sentir en calma.
               </p>
 
+              {/* Tarifas Hermitage */}
+              <div className="space-y-2.5">
+                <span className="text-[10px] font-cinzel tracking-widest text-gold-800 uppercase block font-semibold">
+                  Tarifas por noche
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                  {/* Hermitage Queen */}
+                  <div className="p-4 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex flex-col justify-between shadow-sm">
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-1">
+                        <span className="text-xs font-cinzel tracking-wider text-charcoal-950 font-bold uppercase">
+                          Hermitage Queen
+                        </span>
+                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-charcoal-900 text-gold-300 font-cinzel border border-gold-500/30">
+                          Queen
+                        </span>
+                      </div>
+                      <div className="flex items-baseline gap-1.5 my-1">
+                        <span className="text-2xl font-serif font-bold text-charcoal-950">
+                          $928.00
+                        </span>
+                        <span className="text-xs font-sans text-charcoal-600 font-medium">
+                          MXN / noche
+                        </span>
+                      </div>
+                    </div>
+                    <div className="text-[11px] text-charcoal-600 font-light mt-2 border-t border-gold-500/20 pt-2 flex items-center justify-between">
+                      <span>Cama Queen Size</span>
+                      <span className="text-[10px] text-gold-800 font-medium">Desayuno inc.</span>
+                    </div>
+                  </div>
+
+                  {/* Hermitage KING */}
+                  <div className="p-4 rounded-2xl bg-gold-500/10 border border-gold-500/30 flex flex-col justify-between shadow-sm">
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-1">
+                        <span className="text-xs font-cinzel tracking-wider text-charcoal-950 font-bold uppercase">
+                          Hermitage KING
+                        </span>
+                        <span className="text-[9px] px-2 py-0.5 rounded-full bg-charcoal-900 text-gold-300 font-cinzel border border-gold-500/30">
+                          King
+                        </span>
+                      </div>
+                      <div className="flex items-baseline gap-1.5 my-1">
+                        <span className="text-2xl font-serif font-bold text-charcoal-950">
+                          $1,044.00
+                        </span>
+                        <span className="text-xs font-sans text-charcoal-600 font-medium">
+                          MXN / noche
+                        </span>
+                      </div>
+                    </div>
+                    <div className="text-[11px] text-charcoal-600 font-light mt-2 border-t border-gold-500/20 pt-2 flex items-center justify-between">
+                      <span>Cama King Size</span>
+                      <span className="text-[10px] text-gold-800 font-medium">Desayuno inc.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* Amenidades Hermitage */}
               <div className="bg-cantera-100 p-5 rounded-2xl border border-gold-500/20 space-y-3">
                 <h3 className="text-[11px] font-cinzel tracking-widest text-charcoal-900 uppercase font-semibold">
@@ -255,7 +347,7 @@ export default function HotelesPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-charcoal-700 font-sans">
                   <div className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-gold-600 shrink-0" />
-                    <span>Habitaciones Sencillas y Dobles</span>
+                    <span>Opciones Queen ($928) y KING ($1,044)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <Check className="w-3.5 h-3.5 text-gold-600 shrink-0" />
@@ -288,8 +380,8 @@ export default function HotelesPage() {
                 </div>
               </div>
 
-              {/* Botón Reservar Easy-Rez */}
-              <div className="pt-2">
+              {/* Botón Reservar Easy-Rez & WhatsApp */}
+              <div className="pt-2 flex flex-wrap items-center gap-3">
                 <a
                   href={HOTEL_INFO.bookingUrl}
                   target="_blank"
@@ -299,6 +391,12 @@ export default function HotelesPage() {
                   <span>Reservar</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </a>
+                <WhatsAppButton
+                  message={WA_MESSAGES.hermitageQueen}
+                  text="Consultar por WhatsApp"
+                  variant="outline"
+                  className="px-5 py-3 text-xs text-charcoal-900 border-charcoal-300 hover:border-gold-600"
+                />
               </div>
             </div>
           </div>

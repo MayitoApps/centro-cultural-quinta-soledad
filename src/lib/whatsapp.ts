@@ -10,9 +10,11 @@ export const WA_MESSAGES = {
   general: "Hola, me gustaría recibir informes y atención personalizada sobre Centro Cultural Quinta Soledad.",
   
   // Hoteles
-  utopia: "Hola, me gustaría solicitar informes, tarifas y disponibilidad para reservar una habitación en Utopía Hotel Boutique.",
-  hermitageSencilla: "Hola, me gustaría consultar disponibilidad y tarifas para una habitación Sencilla en Hotel Express Hermitage.",
-  hermitageDoble: "Hola, me gustaría consultar disponibilidad y tarifas para una habitación Doble en Hotel Express Hermitage.",
+  utopia: "Hola, me gustaría solicitar informes y reservar en Utopía Hotel Boutique ($1,392.00 MXN por noche).",
+  hermitageQueen: "Hola, me gustaría consultar disponibilidad y reservar la habitación Hermitage Queen ($928.00 MXN por noche) en Hotel Express Hermitage.",
+  hermitageKing: "Hola, me gustaría consultar disponibilidad y reservar la habitación Hermitage KING ($1,044.00 MXN por noche) en Hotel Express Hermitage.",
+  hermitageSencilla: "Hola, me gustaría consultar disponibilidad y reservar la habitación Hermitage Queen ($928.00 MXN por noche) en Hotel Express Hermitage.",
+  hermitageDoble: "Hola, me gustaría consultar disponibilidad y reservar la habitación Hermitage KING ($1,044.00 MXN por noche) en Hotel Express Hermitage.",
   hospitales: "Hola, me gustaría solicitar informes sobre las tarifas preferenciales de hospedaje para pacientes y familiares que acuden a la zona de hospitales en Tlalpan.",
   
   // Gastronomía & Mixología

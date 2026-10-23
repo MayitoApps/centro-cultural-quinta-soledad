@@ -257,9 +257,15 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-6 space-y-2.5">
-                  <h3 className="text-xl font-serif text-cantera-50">
-                    Utopía Hotel Boutique
-                  </h3>
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-xl font-serif text-cantera-50">
+                      Utopía Hotel Boutique
+                    </h3>
+                    <div className="text-right shrink-0">
+                      <span className="text-lg font-serif font-bold text-gold-400">$1,392.00</span>
+                      <span className="text-[10px] text-cantera-300 font-sans block">MXN / noche</span>
+                    </div>
+                  </div>
                   <p className="text-[11px] text-cantera-300 leading-relaxed font-light">
                     Un refugio íntimo donde la calma, el arte y la historia se encuentran. Habitaciones con alma propia, batas exclusivas en Utopía, Smart TV 32&quot; y desayuno continental incluido (plancha y secadora disponibles en recepción).
                   </p>
@@ -300,11 +306,17 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="p-6 space-y-2.5">
-                  <h3 className="text-xl font-serif text-cantera-50">
-                    Hotel Express Hermitage
-                  </h3>
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-xl font-serif text-cantera-50">
+                      Hotel Express Hermitage
+                    </h3>
+                    <div className="text-right shrink-0">
+                      <span className="text-[10px] text-gold-300 font-cinzel block uppercase tracking-wider">Desde $928.00</span>
+                      <span className="text-[10px] text-cantera-300 font-sans block">MXN / noche</span>
+                    </div>
+                  </div>
                   <p className="text-[11px] text-cantera-300 leading-relaxed font-light">
-                    Habitaciones sencillas y dobles, baño privado completo, room service y desayuno continental (plancha y secadora se piden en recepción). Tarifas preferenciales para pacientes y familiares de hospitales de Tlalpan.
+                    Habitaciones Queen ($928.00) y KING ($1,044.00) por noche. Baño privado completo, room service y desayuno continental (plancha y secadora se piden en recepción). Tarifas preferenciales para zona de hospitales de Tlalpan.
                   </p>
                 </div>
               </div>
