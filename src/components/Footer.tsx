@@ -185,12 +185,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-cantera-400 gap-4">
+        <div className="pt-8 flex justify-center items-center text-xs text-cantera-400 text-center">
           <p>
             © {new Date().getFullYear()} Centro Cultural Quinta Soledad. Todos los derechos reservados.
-          </p>
-          <p className="text-cantera-400/80">
-            Un espacio con alma · Grupo Orgánico Hoteles Boutique · Ciudad de México
           </p>
         </div>
       </div>
