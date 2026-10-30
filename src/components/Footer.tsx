@@ -86,6 +86,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="text-cantera-300 hover:text-gold-300 transition-colors">
+                  Blog & Crónicas de Tlalpan
+                </Link>
+              </li>
+              <li>
                 <Link href="/comunidad" className="text-cantera-300 hover:text-gold-300 transition-colors">
                   Comunidad Tlalpan & Guía Cultural
                 </Link>
