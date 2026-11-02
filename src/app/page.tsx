@@ -19,7 +19,7 @@ import { HOTEL_INFO } from "@/lib/constants";
 import GrupoOrganicoSection from "@/components/GrupoOrganicoSection";
 import OrigenSpaSection from "@/components/OrigenSpaSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import DiaDeMuertosModal from "@/components/DiaDeMuertosModal";
+import NavidadModal from "@/components/NavidadModal";
 import { WA_MESSAGES, WHATSAPP_DISPLAY } from "@/lib/whatsapp";
 
 const SALONES_GALLERY = [
@@ -647,8 +647,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pop-up Festivo Día de Muertos 2026 */}
-      <DiaDeMuertosModal />
+      {/* Pop-up Temporada Navidad & Fin de Año 2026 */}
+      <NavidadModal />
     </div>
   );
 }
